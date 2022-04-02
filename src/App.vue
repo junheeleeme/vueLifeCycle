@@ -1,16 +1,39 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<template>  
+  <div>
+    <h1>Vue Life-Cycle</h1>
+    
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  beforeCreate(){
+    console.log('Before Created');
+  },
+  created(){
+    console.log('Created');
+  },
+  beforeMount(){
+    console.log('BeforeMount');
+  },
+  mounted(){
+    console.log('Mounted!');
+  },
+  beforeUpdate(){
+    console.log('Before Update!');
+  },
+  updated(){
+    console.log('updated!');
+  },
+  beforeUnmount() {
+    console.log('Before UnMounted!');
+  },
+  unmounted() {
+    console.log('UnMounted!');
+  },
+  
 }
 </script>
 
